@@ -8,11 +8,11 @@ pygame.display.set_caption("BruhSnake")
 
 
 class Manager:
-    EAT_SOUND = pygame.mixer.Sound('Cartoon_Munch_Sound_Effect.medium.mp3')
+    EAT_SOUND = pygame.mixer.Sound('Cartoon_Munch_Sound_Effect.wav')
     SCORE_FONT = pygame.font.Font("freesansbold.ttf", 14)
     FAIL_FONT = pygame.font.Font("freesansbold.ttf", 64)
     FAIL_FONT_2 = pygame.font.Font("freesansbold.ttf", 32)
-    FAIL_SOUND = pygame.mixer.Sound('Bruh.mp3')
+    FAIL_SOUND = pygame.mixer.Sound('Bruh.wav')
     _BACK_GROUND = pygame.image.load("Graphics/background1.jpg").convert_alpha()
     BACK_GROUND = pygame.transform.scale(_BACK_GROUND, (900, 500))
 
@@ -369,7 +369,6 @@ class Direction:
     DOWN = 2
     RIGHT = 3
     LEFT = 4
-
 
 
 manager = Manager(win, 900, 500)
