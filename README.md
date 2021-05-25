@@ -52,7 +52,7 @@ Each instance of this class is created with the following fields:
         self.level_requirement = level_requirement
 ```
 
-###Method: run
+### Method: run
 This method is the heart of the game. It calls different methods of the class in a somewhat infinite while loop to keep the game running.
 ```python
 def run(self):
@@ -71,19 +71,19 @@ def run(self):
 
 ```
 
-###Method: check_quit_event
+### Method: check_quit_event
 This method exists solely to check for the quit event which triggers when the player clicks on the "X" on the top right corner.
 
 ###Method: get_directions
 A method to take directional inputs from the player and in turn change the direction in which the snake is moving. Pygame makes taking keyboard inputs relatively easy.
 
-###Method: progress_level
+### Method: progress_level
 Based on the current score of the player, the method changes the level. As the levels change, the snake moves faster and the color of the background changes to imply the increased difficulty. The player progresses through levels whenever their score is a multiple of 25. (25, 50...)
 
-###Method: collision_check
+### Method: collision_check
 The game uses to method to check if player has collided (or in snake terms, eaten) an apple. Apples are spawn on the screen with randomized coordinates (x and y on the pygame screen), this method checks to see if the snake head coordinates are within the range of an apple coordinates. If so, the method removes the food from the screen and increases score by 1.
 
-###Method: generate_food
+### Method: generate_food
 The first conditional line of this method:
 ```python
     def generate_food(self):
@@ -95,11 +95,11 @@ This way, the screen won't fill up with apples if the players chooses to wait a 
 Furthermore, the method uses the python built-in **time** and **random** modules to generate apples every 5 seconds on different parts of the screen. (random decides a random integer for the x and y coordinates and time allows it to happen every 5 seconds)
 
 
-###Methood: add_to_snake
+### Methood: add_to_snake
 As the name suggests, this short method exists to add "body parts" to our snake whenever it eats apples and the score increases.
 In fact the method does not care for the food and only sees the score. This way, another method deals with checking collision with the food and increasing the score and this method receives that score (basically the number of apples the snake has eaten.) and adds to the snake based on it.
 
-###Method: generate_visuals
+### Method: generate_visuals
 ```python
     def generate_visuals(self):
         self.change_background_level()
@@ -117,7 +117,7 @@ A method of methods. This mother method calls a number of other methods that are
 The methods called are mostly written using the Pygame tools.
 
 
-###Method: move
+### Method: move
 ```python
 def move(self):
         if not self.fail:
@@ -130,7 +130,7 @@ Before anything else, the methods checks to see if the fail attribute (which is 
 When the snake has hit a wall or an obstacle, this method takes keyboard input from the player and either resets or closes the game based on it. (Space to close and R to reset the game)
 
 
-#The Snake Class
+# The Snake Class
 a simple class that holds the snake graphics, starting x and y coordinates, and width and height as its attributes.
 ```python
 class Snake:
@@ -161,7 +161,7 @@ class Snake:
 ```
 
 
-#The Food Class
+# The Food Class
 ```python
 class Food:
     _FOOD_IMG = pygame.image.load("Graphics/apple.png").convert_alpha()
@@ -180,10 +180,10 @@ The apples are actually the instances of this class. The class holds food graphi
 
 
 
-#The Obstacle and Background Classes
+# The Obstacle and Background Classes
 These two classes exist to serve different graphical static files as their attributes. Similar to how the food and snake class worked
 
-#The Directions Class
+# The Directions Class
 Another simple class that provides values for different directions (UP, DOWN, RIGHT, LEFT) as its attributes.
 
 Have fun!
