@@ -74,7 +74,7 @@ def run(self):
 ### Method: check_quit_event
 This method exists solely to check for the quit event which triggers when the player clicks on the "X" on the top right corner.
 
-###Method: get_directions
+### Method: get_directions
 A method to take directional inputs from the player and in turn change the direction in which the snake is moving. Pygame makes taking keyboard inputs relatively easy.
 
 ### Method: progress_level
