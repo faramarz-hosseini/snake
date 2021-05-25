@@ -136,22 +136,7 @@ a simple class that holds the snake graphics, starting x and y coordinates, and 
 class Snake:
     WIDTH = 30
     HEIGHT = 30
-    _SNAKE_IMG_DOWN = pygame.image.load("Graphics/snake_head_down.png").convert_alpha()
-    SNAKE_IMG_DOWN = pygame.transform.scale(_SNAKE_IMG_DOWN, (30, 30))
-    _SNAKE_IMG_UP = pygame.image.load("Graphics/snake_head_up.png").convert_alpha()
-    SNAKE_IMG_UP = pygame.transform.scale(_SNAKE_IMG_UP, (30, 30))
-    _SNAKE_IMG_RIGHT = pygame.image.load("Graphics/snake_head_right.png").convert_alpha()
-    SNAKE_IMG_RIGHT = pygame.transform.scale(_SNAKE_IMG_RIGHT, (30, 30))
-    _SNAKE_IMG_LEFT = pygame.image.load("Graphics/snake_head_left.png").convert_alpha()
-    SNAKE_IMG_LEFT = pygame.transform.scale(_SNAKE_IMG_LEFT, (30, 30))
-    _SNAKE_BODY_IMG_RIGHT = pygame.image.load("Graphics/snake_body_right.png").convert_alpha()
-    SNAKE_BODY_IMG_RIGHT = pygame.transform.scale(_SNAKE_BODY_IMG_RIGHT, (30, 30))
-    _SNAKE_BODY_IMG_LEFT = pygame.image.load("Graphics/snake_body_left.png").convert_alpha()
-    SNAKE_BODY_IMG_LEFT = pygame.transform.scale(_SNAKE_BODY_IMG_LEFT, (30, 30))
-    _SNAKE_BODY_IMG_UP = pygame.image.load("Graphics/snake_body_up.png").convert_alpha()
-    SNAKE_BODY_IMG_UP = pygame.transform.scale(_SNAKE_BODY_IMG_UP, (30, 30))
-    _SNAKE_BODY_IMG_DOWN = pygame.image.load("Graphics/snake_body_down.png").convert_alpha()
-    SNAKE_BODY_IMG_DOWN = pygame.transform.scale(_SNAKE_BODY_IMG_DOWN, (30, 30))
+    
 
     def __init__(self, x, y):
         self.x = x
